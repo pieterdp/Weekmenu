@@ -16,4 +16,9 @@ def index():
 def week_overview(week=None):
     if not week:
         week = datetime.now().strftime('%U')
-    return render_template('weekmenu/week.html', week=week)
+    return render_template('weekmenu/week.html', week=week, title='Week {0}'.format(week))
+
+
+@gui.route('/recipe/<string:recipe_id>', methods=['GET'])
+def recipe(recipe_id):
+    return render_template('weekmenu/recipe.html', recipe_id=recipe_id, title='Recept')

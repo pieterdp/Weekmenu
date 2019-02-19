@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>{% if title %}{{ title }}{% else %}Weekmenu{% endif %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='js/template/vendor/bootstrap/css/bootstrap.min.css') }}"
@@ -44,16 +44,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="{{ url_for('gui.index') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="{{ url_for('gui.week_overview') }}">Deze week</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="post.html">Sample Post</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="">Beheer</a>
                 </li>
             </ul>
         </div>
@@ -96,7 +93,6 @@
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
             </div>
         </div>
     </div>
