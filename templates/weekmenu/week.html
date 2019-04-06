@@ -1,5 +1,18 @@
 {% extends 'layout/base.html' %}
 {% block content %}
+    <header class="masthead masthead-page">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Week <span id="current_week">{{ week }}</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
